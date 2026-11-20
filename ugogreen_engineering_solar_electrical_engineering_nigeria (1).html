@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UgoGreen Engineering | Solar Installation &amp; Electrical Engineering in Nigeria</title>
+  <meta name="description" content="Certified Electrical Engineer specializing in Solar PV & Hybrid Power Systems, LiFePO4 Storage, Industrial Wiring, ATS Panels, Earthing & NEMSA-Compliant Power Distribution in Nigeria." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            emerald: {
+              850: '#064e3b',
+              900: '#022c22',
+              950: '#011c16',
+            },
+            solar: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-700 selection:text-white">
+
+  <!-- ==================== STICKY GLASSMORPHIC NAVIGATION ==================== -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-600 flex items-center justify-center text-white shadow-md shadow-emerald-900/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="sun" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-xl tracking-tight text-emerald-950 block leading-none">
+              UgoGreen<span class="text-amber-500">.</span>
+            </span>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 block mt-0.5">
+              Solar &amp; Electrical Eng.
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+          <a href="#services" class="hover:text-emerald-700 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            Services
+          </a>
+          <a href="#calculator" class="hover:text-emerald-700 transition-colors">Solar Calculator</a>
+          <a href="#packages" class="hover:text-emerald-700 transition-colors">Solar Packages</a>
+          <a href="#competence" class="hover:text-emerald-700 transition-colors">Eng. Standards</a>
+          <a href="#projects" class="hover:text-emerald-700 transition-colors">Projects</a>
+          <a href="#about" class="hover:text-emerald-700 transition-colors">About Ugo Green</a>
+        </nav>
+
+        <!-- Action CTAs -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/2348008464733?text=Hello%20UgoGreen%20Engineering%2C%20I%20would%20like%20to%20consult%20on%20a%20solar%20or%20electrical%20engineering%20project."
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+            <span>WhatsApp Engineer</span>
+          </a>
+          <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'General Engineering Site Audit Inquiry')"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-emerald-800 hover:bg-emerald-700 shadow-md shadow-emerald-900/15 transition-all">
+            <span>Book Engineering Audit</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-amber-400"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2.5 shadow-xl">
+      <a href="#services" class="mobile-nav-link block px-4 py-3 rounded-xl font-semibold text-emerald-900 bg-emerald-50/70">
+        ⚡ Solar &amp; Electrical Services
+      </a>
+      <a href="#calculator" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">
+        Interactive Solar Load Calculator
+      </a>
+      <a href="#packages" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">
+        Turnkey Solar Packages
+      </a>
+      <a href="#competence" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">
+        Electrical Engineering Competence
+      </a>
+      <a href="#projects" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50">
+        Completed Nigerian Projects
+      </a>
+      <div class="pt-2 grid grid-cols-2 gap-3">
+        <a href="https://wa.me/2348008464733" target="_blank" rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold text-emerald-900 bg-emerald-100">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
+        <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'Mobile Header Engineering Audit Request')"
+                class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-emerald-800">
+          Book Audit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative overflow-hidden bg-emerald-950 text-white pt-14 pb-20 lg:pt-24 lg:pb-28">
+    <!-- Subtle Geometric Grid & Glow -->
+    <div class="absolute inset-0 opacity-15 pointer-events-none"
+         style="background-image: radial-gradient(#34d399 1px, transparent 1px); background-size: 28px 28px;"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Value Proposition -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex flex-wrap items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-900/90 border border-emerald-700/70 text-amber-300 text-xs sm:text-sm font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            <span>COREN-Standard • IEC 60364 / IEEE • NEMSA &amp; NERC Compliant Engineering</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.3rem] leading-[1.12] tracking-tight text-white">
+            Solar Power &amp; Electrical Engineering Solutions —
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-300">
+              Engineered for Reliability by Ugo Green.
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-emerald-100/90 max-w-2xl leading-relaxed">
+            Led by certified Electrical Engineer <strong class="text-white">Ugo Green</strong>, we deliver end-to-end <strong class="text-amber-300">Solar PV &amp; LiFePO4 Energy Storage Installations</strong> alongside precision <strong class="text-emerald-200">Core Electrical Engineering</strong>—including 3-phase wiring, ATS changeover panels, chemical earthing, surge protection, and power distribution across Nigeria.
+          </p>
+
+          <!-- Primary & Secondary CTAs + Quick Jump -->
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3.5 pt-2">
+            <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'Hero Engineering Audit Request')"
+                    class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-display font-bold text-base bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-xl shadow-amber-500/20 transition-all hover:-translate-y-0.5">
+              <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+              <span>Book Engineering Audit</span>
+            </button>
+            <a href="#services"
+               class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-display font-bold text-base bg-white/10 hover:bg-white/15 text-white border border-white/20 backdrop-blur-sm transition-all">
+              <i data-lucide="layers" class="w-5 h-5 text-amber-400"></i>
+              <span>Explore Engineering Services</span>
+            </a>
+          </div>
+
+          <div class="pt-1">
+            <a href="#calculator" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-300 hover:text-amber-200 transition-colors group">
+              <i data-lucide="calculator" class="w-4 h-4"></i>
+              <span>Or jump straight to our Interactive Nigerian Solar Load Calculator</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Key Trust Metrics -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-emerald-800/80">
+            <div>
+              <p class="font-display font-extrabold text-2xl sm:text-3xl text-amber-400">500+</p>
+              <p class="text-xs sm:text-sm text-emerald-200 mt-1">Solar &amp; Electrical Projects</p>
+            </div>
+            <div>
+              <p class="font-display font-extrabold text-2xl sm:text-3xl text-white">Dual-Core</p>
+              <p class="text-xs sm:text-sm text-emerald-200 mt-1">Solar PV + HV/LV Power Eng.</p>
+            </div>
+            <div>
+              <p class="font-display font-extrabold text-2xl sm:text-3xl text-amber-400">&lt; 2.0 Ω</p>
+              <p class="text-xs sm:text-sm text-emerald-200 mt-1">Verified Earth Resistance</p>
+            </div>
+            <div>
+              <p class="font-display font-extrabold text-2xl sm:text-3xl text-white">5-Year</p>
+              <p class="text-xs sm:text-sm text-emerald-200 mt-1">System &amp; Workmanship Warranty</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Engineering Showcase Card (Self-Contained SVG Schematic + Live Telemetry) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl bg-gradient-to-b from-emerald-900/90 to-emerald-950 border border-emerald-700/60 p-6 sm:p-8 shadow-2xl">
+            <!-- Custom SVG Hybrid Solar + 3-Phase Distribution Single-Line Graphic -->
+            <div class="relative rounded-2xl overflow-hidden mb-6 bg-emerald-950 border border-emerald-800 p-4">
+              <div class="flex items-center justify-between text-[11px] font-mono text-emerald-300 mb-2">
+                <span>SLD-UG-2026 // HYBRID + ATS BUS</span>
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">IEC 60364</span>
+              </div>
+              <svg viewBox="0 0 420 215" class="w-full h-auto" role="img" aria-label="Hybrid Solar PV, LiFePO4 Battery, and 3-Phase ATS Distribution Schematic">
+                <defs>
+                  <linearGradient id="busGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#34d399" />
+                    <stop offset="50%" stop-color="#fbbf24" />
+                    <stop offset="100%" stop-color="#34d399" />
+                  </linearGradient>
+                </defs>
+                <!-- Background Grid -->
+                <rect x="0" y="0" width="420" height="215" rx="12" fill="#011c16" />
+                <!-- Solar PV Array Node -->
+                <rect x="16" y="16" width="116" height="54" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="1.5" />
+                <text x="74" y="38" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="bold" font-family="sans-serif">SOLAR PV ARRAY</text>
+                <text x="74" y="54" text-anchor="middle" fill="#d1fae5" font-size="10" font-family="monospace">9.9 kWp N-Type</text>
+
+                <!-- Grid / Gen ATS Node -->
+                <rect x="288" y="16" width="116" height="54" rx="10" fill="#064e3b" stroke="#fbbf24" stroke-width="1.5" />
+                <text x="346" y="38" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="bold" font-family="sans-serif">3-PHASE ATS</text>
+                <text x="346" y="54" text-anchor="middle" fill="#d1fae5" font-size="10" font-family="monospace">Grid / Gen Sync</text>
+
+                <!-- Connecting Lines to Central Inverter -->
+                <path d="M132 43 L162 43 L162 85" stroke="#fbbf24" stroke-width="2" fill="none" />
+                <path d="M288 43 L258 43 L258 85" stroke="#34d399" stroke-width="2" fill="none" />
+
+                <!-- Central Hybrid Inverter & Protection Bus -->
+                <rect x="125" y="85" width="170" height="56" rx="12" fill="#022c22" stroke="url(#busGrad)" stroke-width="2" />
+                <text x="210" y="108" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold" font-family="sans-serif">HYBRID INVERTER &amp; DB</text>
+                <text x="210" y="125" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="monospace">MPPT + Type 1+2 SPD</text>
+
+                <!-- Bottom Connections -->
+                <path d="M165 141 L165 162 L85 162" stroke="#34d399" stroke-width="2" fill="none" />
+                <path d="M255 141 L255 162 L335 162" stroke="#fbbf24" stroke-width="2" fill="none" />
+
+                <!-- LiFePO4 Bank Node -->
+                <rect x="16" y="146" width="124" height="52" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="1.5" />
+                <text x="78" y="168" text-anchor="middle" fill="#34d399" font-size="11" font-weight="bold" font-family="sans-serif">LiFePO4 BANK</text>
+                <text x="78" y="184" text-anchor="middle" fill="#ffffff" font-size="10" font-family="monospace">20.48 kWh BMS</text>
+
+                <!-- Earthing & Protected Load Node -->
+                <rect x="280" y="146" width="124" height="52" rx="10" fill="#064e3b" stroke="#fbbf24" stroke-width="1.5" />
+                <text x="342" y="168" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="bold" font-family="sans-serif">EARTH &amp; LOADS</text>
+                <text x="342" y="184" text-anchor="middle" fill="#ffffff" font-size="10" font-family="monospace">R &lt; 1.8Ω | 24/7 AC</text>
+              </svg>
+              <div class="mt-2 flex items-center justify-between text-xs">
+                <span class="px-2.5 py-1 rounded-full bg-emerald-900/90 border border-emerald-700 text-emerald-200 font-medium">
+                  Live Telemetry &amp; Fault Protection
+                </span>
+                <span class="px-2.5 py-1 rounded-full bg-amber-500 text-emerald-950 font-bold">
+                  99.4% Uptime
+                </span>
+              </div>
+            </div>
+
+            <!-- Live System Simulation Telemetry Widget -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-wider text-emerald-300 font-semibold">Integrated Power Architecture</p>
+                  <h3 class="font-display font-bold text-lg text-white">Solar PV + 3-Phase ATS &amp; Earthing</h3>
+                </div>
+                <span class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-amber-400">
+                  <i data-lucide="zap" class="w-5 h-5"></i>
+                </span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="p-3 rounded-2xl bg-emerald-900/70 border border-emerald-800">
+                  <span class="text-[11px] text-emerald-300 block">Phase Balance</span>
+                  <span class="font-display font-bold text-base text-amber-400">R-Y-B Sync</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-emerald-900/70 border border-emerald-800">
+                  <span class="text-[11px] text-emerald-300 block">Transfer Time</span>
+                  <span class="font-display font-bold text-base text-emerald-300">&lt; 10 ms</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-emerald-900/70 border border-emerald-800">
+                  <span class="text-[11px] text-emerald-300 block">Diesel Saved</span>
+                  <span class="font-display font-bold text-base text-white">₦480k/mo</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3 pt-2 text-xs text-emerald-200">
+                <i data-lucide="shield-check" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                <span>Engineered with AutoCAD Single-Line Diagrams, RCBO/MCCB protection, and chemical copper earthing.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OEM HARDWARE PARTNERS STRIP ==================== -->
+  <section class="bg-white border-b border-slate-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-400 shrink-0">
+          OEM Solar &amp; Electrical Partners:
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-9 text-slate-600 font-display font-bold text-sm sm:text-base">
+          <span class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-4 h-4 text-emerald-700"></i> Victron Energy</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="zap" class="w-4 h-4 text-amber-500"></i> Deye Hybrid</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="battery-charging" class="w-4 h-4 text-emerald-700"></i> Pylontech</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-4 h-4 text-amber-500"></i> Schneider Electric</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="sliders" class="w-4 h-4 text-emerald-700"></i> ABB / Chint</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="sun" class="w-4 h-4 text-amber-500"></i> Jinko / Canadian Solar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DUAL-TRACK SOLAR & ELECTRICAL ENGINEERING SERVICES (#services) ==================== -->
+  <section id="services" class="py-16 lg:py-24 bg-white border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+          Dual-Discipline Engineering Matrix
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Solar Installation &amp; Core Electrical Engineering Services
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">
+          Unlike ordinary solar vendors, UgoGreen combines renewable energy deployment with licensed electrical engineering—ensuring safe wiring, balanced 3-phase loads, surge immunity, and statutory compliance.
+        </p>
+      </div>
+
+      <!-- Interactive Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12" id="service-filter-tabs">
+        <button onclick="filterServices('all')" data-service-filter="all"
+                class="service-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold bg-emerald-900 text-white shadow-md transition-all flex items-center gap-2">
+          <i data-lucide="grid" class="w-4 h-4 text-amber-400"></i>
+          <span>All Services (10)</span>
+        </button>
+        <button onclick="filterServices('solar')" data-service-filter="solar"
+                class="service-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 transition-all flex items-center gap-2">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-500"></i>
+          <span>Solar &amp; Renewable Systems (5)</span>
+        </button>
+        <button onclick="filterServices('electrical')" data-service-filter="electrical"
+                class="service-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 transition-all flex items-center gap-2">
+          <i data-lucide="zap" class="w-4 h-4 text-emerald-700"></i>
+          <span>Electrical Engineering &amp; Power (5)</span>
+        </button>
+      </div>
+
+      <!-- Services Grid Container -->
+      <div id="services-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE NIGERIAN SOLAR LOAD CALCULATOR ==================== -->
+  <section id="calculator" class="py-16 lg:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+          Smart Engineering Sizing Tool
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Nigerian Solar Load &amp; System Sizing Calculator
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">
+          Select your household or office appliances below, choose your desired daily backup duration, and get an instant engineering recommendation with Naira (₦) cost and generator fuel savings.
+        </p>
+      </div>
+
+      <!-- Quick Presets Bar -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 mr-1">Quick Load Presets:</span>
+        <button onclick="applyPreset('flat')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-800 shadow-sm transition-all">
+          2-Bedroom Flat (No AC)
+        </button>
+        <button onclick="applyPreset('duplex')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-800 shadow-sm transition-all">
+          3-Bed Duplex + 1.5HP AC
+        </button>
+        <button onclick="applyPreset('executive')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-800 shadow-sm transition-all">
+          Executive 4-Bed Villa (2 ACs)
+        </button>
+        <button onclick="applyPreset('office')" class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 hover:border-emerald-600 hover:text-emerald-800 shadow-sm transition-all">
+          SME Office / Clinic
+        </button>
+        <button onclick="resetCalculator()" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-rose-600 bg-rose-50 hover:bg-rose-100 transition-all">
+          Reset All
+        </button>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: Appliance Selector & Backup Controls -->
+        <div class="lg:col-span-7 bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center justify-between pb-5 mb-6 border-b border-slate-100">
+            <div>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900">1. Select Your Appliances</h3>
+              <p class="text-xs sm:text-sm text-slate-500">Adjust quantities (+/-) to match your building load</p>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-slate-400 block">Active Items</span>
+              <span id="active-items-count" class="font-display font-extrabold text-lg text-emerald-700">0</span>
+            </div>
+          </div>
+
+          <!-- Appliance List Grid -->
+          <div id="appliance-list" class="grid sm:grid-cols-2 gap-3.5">
+            <!-- Dynamically populated by JS -->
+          </div>
+
+          <!-- Daily Backup Duration Selector -->
+          <div class="mt-8 pt-6 border-t border-slate-100">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+              <div>
+                <h4 class="font-display font-bold text-base text-slate-900">2. Desired Daily Backup Hours (Night / No-Sun Autonomy)</h4>
+                <p class="text-xs text-slate-500">Determines LiFePO4 lithium battery bank storage capacity (kWh)</p>
+              </div>
+              <span id="backup-hours-label" class="inline-flex items-center px-3 py-1 rounded-lg bg-amber-100 text-amber-800 font-bold text-sm">
+                12 Hours Autonomy
+              </span>
+            </div>
+
+            <div class="grid grid-cols-4 gap-2.5" id="backup-buttons">
+              <button data-hours="8" onclick="setBackupHours(8)"
+                      class="backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-slate-200 bg-slate-50 text-slate-700 hover:border-emerald-600">
+                8 Hrs
+                <span class="block text-[10px] font-normal text-slate-500">Evening</span>
+              </button>
+              <button data-hours="12" onclick="setBackupHours(12)"
+                      class="backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-emerald-700 bg-emerald-800 text-white shadow-md">
+                12 Hrs
+                <span class="block text-[10px] font-normal text-emerald-200">Overnight</span>
+              </button>
+              <button data-hours="18" onclick="setBackupHours(18)"
+                      class="backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-slate-200 bg-slate-50 text-slate-700 hover:border-emerald-600">
+                18 Hrs
+                <span class="block text-[10px] font-normal text-slate-500">Extended</span>
+              </button>
+              <button data-hours="24" onclick="setBackupHours(24)"
+                      class="backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-slate-200 bg-slate-50 text-slate-700 hover:border-emerald-600">
+                24 Hrs
+                <span class="block text-[10px] font-normal text-slate-500">Off-Grid</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Engineering Sizing Output Card -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24">
+          <div class="rounded-3xl bg-emerald-950 text-white p-6 sm:p-8 shadow-2xl border border-emerald-800">
+            <div class="flex items-center justify-between pb-5 border-b border-emerald-800/80">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Live Engineering Spec</span>
+                <h3 class="font-display font-extrabold text-xl text-white mt-0.5">Recommended Solar System</h3>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-emerald-900 border border-emerald-700 flex items-center justify-center text-amber-400">
+                <i data-lucide="gauge" class="w-6 h-6"></i>
+              </div>
+            </div>
+
+            <!-- Primary Load Metrics -->
+            <div class="grid grid-cols-2 gap-4 my-6">
+              <div class="p-4 rounded-2xl bg-emerald-900/70 border border-emerald-800">
+                <span class="text-xs text-emerald-300 block">Total Running Load</span>
+                <span id="calc-total-watts" class="font-display font-extrabold text-2xl text-white mt-1 block">0 W</span>
+                <span id="calc-total-kva" class="text-xs text-amber-400 font-semibold">0.00 kVA Demand</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-emerald-900/70 border border-emerald-800">
+                <span class="text-xs text-emerald-300 block">Recommended Inverter</span>
+                <span id="calc-inverter" class="font-display font-extrabold text-2xl text-amber-400 mt-1 block">3.5 kVA</span>
+                <span class="text-xs text-emerald-200">Pure Sine Hybrid MPPT</span>
+              </div>
+            </div>
+
+            <!-- Hardware Breakdown List -->
+            <div class="space-y-3 bg-emerald-900/40 rounded-2xl p-4 border border-emerald-800/80 text-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-emerald-200 flex items-center gap-2">
+                  <i data-lucide="battery-charging" class="w-4 h-4 text-amber-400"></i>
+                  LiFePO4 Lithium Bank:
+                </span>
+                <span id="calc-battery" class="font-bold text-white">5.12 kWh (48V/51.2V)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-emerald-200 flex items-center gap-2">
+                  <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+                  550W Mono Solar Panels:
+                </span>
+                <span id="calc-panels" class="font-bold text-white">6 Panels (3.30 kWp)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-emerald-200 flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-amber-400"></i>
+                  Protection &amp; Install:
+                </span>
+                <span class="font-semibold text-emerald-300">Included (Turnkey)</span>
+              </div>
+            </div>
+
+            <!-- Financial ROI & Naira Estimate -->
+            <div class="mt-6 pt-6 border-t border-emerald-800/80">
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm text-emerald-200">Estimated Turnkey Cost:</span>
+                <span id="calc-cost" class="font-display font-extrabold text-2xl sm:text-3xl text-amber-400">₦2,850,000</span>
+              </div>
+              <p class="text-[11px] text-emerald-300/80 mt-1">
+                *Includes Tier-1 panels, LiFePO4 battery, hybrid inverter, aluminum roof rails, DC/AC breakers &amp; installation.
+              </p>
+
+              <!-- Generator Savings Box -->
+              <div class="mt-4 p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 to-emerald-800/40 border border-amber-400/30 flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold text-amber-300 block">Est. Monthly Fuel/Diesel Saved</span>
+                  <span id="calc-savings" class="font-display font-extrabold text-lg text-white">₦165,000 / month</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs text-emerald-200 block">Est. Payback</span>
+                  <span id="calc-payback" class="font-display font-bold text-base text-amber-400">~17 Months</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Send Estimate CTA -->
+            <button onclick="sendEstimateToQuote()"
+                    class="mt-6 w-full py-4 px-6 rounded-2xl font-display font-bold text-base bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5">
+              <span>Send This Estimate for Official Quote</span>
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CURATED TURNKEY SOLAR PACKAGES ==================== -->
+  <section id="packages" class="py-16 lg:py-24 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800 mb-3">
+          Turnkey Engineered Bundles
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Popular Solar &amp; Lithium Packages in Nigeria
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">
+          Pre-engineered packages utilizing Grade-A LiFePO4 batteries (6,000+ cycles / 10-year design life) and high-efficiency monocrystalline half-cut panels.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Package 1: Starter Home -->
+        <div class="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Starter Home</span>
+              <i data-lucide="home" class="w-5 h-5 text-emerald-700"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-slate-900">3.5kVA / 5kWh Lithium</h3>
+            <p class="text-xs text-slate-500 mt-1">Ideal for 2–3 Bedroom Flats &amp; Smart Apartments</p>
+
+            <div class="my-5 pb-5 border-b border-slate-200">
+              <span class="text-xs text-slate-400 block">Complete Installed Price</span>
+              <span class="font-display font-extrabold text-2xl text-emerald-900">₦2,950,000</span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>3.5kVA / 24V</strong> Pure Sine Hybrid Inverter</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>5.12kWh LiFePO4</strong> Wall-Mount Lithium Battery</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>6 × 550W (3.3kWp)</strong> Tier-1 Mono Panels</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Powers LED Lights, 4 Fans, 2 TVs, Fridge, Wi-Fi &amp; Laptops</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openAuditModal('Solar Installation', 'Starter Home Package: 3.5kVA Hybrid + 5kWh LiFePO4 (₦2,950,000)')"
+                  class="mt-6 w-full py-3 px-4 rounded-xl font-display font-bold text-sm bg-white border-2 border-emerald-800 text-emerald-900 hover:bg-emerald-800 hover:text-white transition-colors">
+            Select Starter Package
+          </button>
+        </div>
+
+        <!-- Package 2: Executive Home (Most Popular) -->
+        <div class="relative rounded-3xl border-2 border-amber-500 bg-emerald-950 text-white p-6 flex flex-col justify-between shadow-2xl">
+          <div class="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-amber-500 text-emerald-950 font-display font-extrabold text-[11px] uppercase tracking-wider shadow">
+            Most Popular
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-800 text-amber-300">Executive Home</span>
+              <i data-lucide="award" class="w-5 h-5 text-amber-400"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-white">5kVA / 10kWh Lithium</h3>
+            <p class="text-xs text-emerald-300 mt-1">Built for Duplexes &amp; Inverter AC Comfort</p>
+
+            <div class="my-5 pb-5 border-b border-emerald-800">
+              <span class="text-xs text-emerald-300 block">Complete Installed Price</span>
+              <span class="font-display font-extrabold text-2xl text-amber-400">₦5,450,000</span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-emerald-100">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>5kVA / 48V</strong> Smart Wi-Fi Hybrid Inverter</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>10.24kWh LiFePO4</strong> Lithium Battery Bank</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>10 × 550W (5.5kWp)</strong> Tier-1 Mono Panels</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span>Runs <strong>1.5HP Inverter AC</strong>, Deep Freezer, 1HP Pump + Full Home Loads</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openAuditModal('Solar Installation', 'Executive Home Package: 5kVA Hybrid + 10kWh LiFePO4 (₦5,450,000)')"
+                  class="mt-6 w-full py-3.5 px-4 rounded-xl font-display font-bold text-sm bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-lg transition-colors">
+            Select Executive Package
+          </button>
+        </div>
+
+        <!-- Package 3: Villa & Office Pro -->
+        <div class="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">Villa &amp; Office Pro</span>
+              <i data-lucide="building-2" class="w-5 h-5 text-emerald-700"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-slate-900">10kVA / 20kWh Lithium</h3>
+            <p class="text-xs text-slate-500 mt-1">Total 24/7 Autonomy for Villas &amp; SME Offices</p>
+
+            <div class="my-5 pb-5 border-b border-slate-200">
+              <span class="text-xs text-slate-400 block">Complete Installed Price</span>
+              <span class="font-display font-extrabold text-2xl text-emerald-900">₦10,200,000</span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>10kVA / 48V</strong> Dual-MPPT Hybrid Inverter</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>20.48kWh LiFePO4</strong> Rack/Wall Lithium Bank</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>18 × 550W (9.9kWp)</strong> Tier-1 Mono Panels</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Powers <strong>3 Inverter ACs</strong>, Freezers, Borehole Pump, Washing Machine &amp; Office Servers</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openAuditModal('Solar Installation', 'Villa & Office Pro Package: 10kVA Hybrid + 20kWh LiFePO4 (₦10,200,000)')"
+                  class="mt-6 w-full py-3 px-4 rounded-xl font-display font-bold text-sm bg-white border-2 border-emerald-800 text-emerald-900 hover:bg-emerald-800 hover:text-white transition-colors">
+            Select Villa Pro Package
+          </button>
+        </div>
+
+        <!-- Package 4: Commercial / Industrial Mini-Grid -->
+        <div class="rounded-3xl border border-slate-200 bg-slate-50/70 p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-xl transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-200 text-slate-800">Commercial &amp; Estate</span>
+              <i data-lucide="factory" class="w-5 h-5 text-emerald-700"></i>
+            </div>
+            <h3 class="font-display font-extrabold text-xl text-slate-900">20kVA – 100kVA+</h3>
+            <p class="text-xs text-slate-500 mt-1">3-Phase Mini-Grids for Hotels, Clinics &amp; Plazas</p>
+
+            <div class="my-5 pb-5 border-b border-slate-200">
+              <span class="text-xs text-slate-400 block">Engineering Estimate</span>
+              <span class="font-display font-extrabold text-2xl text-emerald-900">Custom EPC Quote</span>
+            </div>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>3-Phase Parallel</strong> Victron / Deye Industrial Inverters</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>40kWh – 250kWh+</strong> High-Voltage LiFePO4 Storage</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Diesel Generator Auto-Sync &amp; Peak Shaving</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                <span>Dedicated SLA Maintenance &amp; PVsyst Shading Report</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'Commercial / Industrial 3-Phase Mini-Grid (20kVA - 100kVA+)')"
+                  class="mt-6 w-full py-3 px-4 rounded-xl font-display font-bold text-sm bg-emerald-800 hover:bg-emerald-700 text-white transition-colors">
+            Request Commercial Audit
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ELECTRICAL ENGINEERING COMPETENCE & STANDARDS (#competence) ==================== -->
+  <section id="competence" class="py-16 lg:py-24 bg-emerald-950 text-white border-t border-emerald-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-400/30 mb-3">
+          Electrical Engineering Methodology
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+          Electrical Engineering Competence &amp; Technical Standards
+        </h2>
+        <p class="text-emerald-200/90 mt-3 text-base sm:text-lg">
+          Every solar array, distribution board, and industrial power network we deploy is backed by rigorous electrical calculations, international safety codes, and calibrated test instrumentation.
+        </p>
+      </div>
+
+      <!-- 4-Stage Engineering Workflow -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+        <div class="p-6 rounded-3xl bg-emerald-900/60 border border-emerald-800 relative">
+          <div class="flex items-center justify-between mb-5">
+            <span class="w-10 h-10 rounded-2xl bg-amber-500 text-emerald-950 font-display font-extrabold flex items-center justify-center text-base">
+              01
+            </span>
+            <i data-lucide="activity" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Load Profiling &amp; Site Survey</h3>
+          <p class="text-sm text-emerald-200/85 mt-2 leading-relaxed">
+            Clamp-meter phase logging across R-Y-B lines, inductive starting-current measurement, soil resistivity checks, and roof structural assessment.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-emerald-900/60 border border-emerald-800 relative">
+          <div class="flex items-center justify-between mb-5">
+            <span class="w-10 h-10 rounded-2xl bg-amber-500 text-emerald-950 font-display font-extrabold flex items-center justify-center text-base">
+              02
+            </span>
+            <i data-lucide="file-spreadsheet" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">AutoCAD SLD &amp; Cable Sizing</h3>
+          <p class="text-sm text-emerald-200/85 mt-2 leading-relaxed">
+            Detailed AutoCAD Single-Line Diagrams (SLD), short-circuit fault ratings, &lt;2% voltage-drop cable sizing, and PVsyst solar yield simulation.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-emerald-900/60 border border-emerald-800 relative">
+          <div class="flex items-center justify-between mb-5">
+            <span class="w-10 h-10 rounded-2xl bg-amber-500 text-emerald-950 font-display font-extrabold flex items-center justify-center text-base">
+              03
+            </span>
+            <i data-lucide="shield-alert" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Precision Install &amp; Protection</h3>
+          <p class="text-sm text-emerald-200/85 mt-2 leading-relaxed">
+            Galvanized/PVC conduit dressing, custom ATS &amp; MCCB/RCBO panels, Type 1+2 AC/DC surge arrestors, and chemical copper earth pits.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-emerald-900/60 border border-emerald-800 relative">
+          <div class="flex items-center justify-between mb-5">
+            <span class="w-10 h-10 rounded-2xl bg-amber-500 text-emerald-950 font-display font-extrabold flex items-center justify-center text-base">
+              04
+            </span>
+            <i data-lucide="check-square" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <h3 class="font-display font-bold text-lg text-white">Megger Testing &amp; Commissioning</h3>
+          <p class="text-sm text-emerald-200/85 mt-2 leading-relaxed">
+            500V/1000V Megger insulation resistance testing, earth loop impedance verification, BMS telemetry setup, and NEMSA inspection handover.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Technical Competencies & Engineering Tools Grid -->
+      <div class="rounded-3xl bg-emerald-900/40 border border-emerald-800 p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-6 border-b border-emerald-800/80">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Engineering Stack &amp; Regulatory Mastery</span>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white mt-1">
+              Core Technical Competencies &amp; Design Tools
+            </h3>
+          </div>
+          <button onclick="openAuditModal('Electrical Engineering', 'Technical SLD / Load Audit / Compliance Consultation')"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-display font-bold text-xs sm:text-sm bg-amber-500 hover:bg-amber-400 text-emerald-950 transition-colors shrink-0">
+            <span>Consult Lead Engineer</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="pen-tool" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">AutoCAD Electrical &amp; SLD Schematics</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">As-built panel layouts, DB schedules, ATS control logic diagrams, and conduit routing blueprints.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0">
+              <i data-lucide="sun-medium" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">PVsyst Solar Yield &amp; Shading Simulation</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">3D horizon shading modeling, string voltage window optimization, and bankable kWh yield forecasting.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">ETAP / Load Flow &amp; Short-Circuit Analysis</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">Transformer sizing, breaker discrimination, harmonic mitigation, and capacitor bank PF correction.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">IEC 60364 &amp; IEEE Wiring Standards</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">Strict adherence to international low-voltage installation, discrimination, and earthing standards.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">NEMSA &amp; NERC Grid Code Compliance</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">Statutory electrical testing, anti-islanding protection, and DisCo/NEMSA certification documentation.</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-950/80 border border-emerald-800/90 flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0">
+              <i data-lucide="thermometer" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm text-white">Thermal &amp; Power Quality Diagnostics</h4>
+              <p class="text-xs text-emerald-200/80 mt-1">Infrared thermography of busbars and PV modules, earth loop impedance, and insulation testing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPLETED NIGERIAN PROJECTS PORTFOLIO ==================== -->
+  <section id="projects" class="py-16 lg:py-24 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+            Proven Track Record
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+            Completed Solar Installations Across Nigeria
+          </h2>
+          <p class="text-slate-600 mt-2 max-w-2xl">
+            Explore real residential, commercial, and estate deployments engineered and commissioned by Ugo Green and our certified field teams.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button onclick="filterProjects('all')" data-filter="all"
+                  class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-800 text-white shadow-sm transition-all">
+            All Projects
+          </button>
+          <button onclick="filterProjects('residential')" data-filter="residential"
+                  class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-200 hover:border-emerald-600 transition-all">
+            Residential
+          </button>
+          <button onclick="filterProjects('commercial')" data-filter="commercial"
+                  class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-200 hover:border-emerald-600 transition-all">
+            Commercial
+          </button>
+          <button onclick="filterProjects('industrial')" data-filter="industrial"
+                  class="project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-200 hover:border-emerald-600 transition-all">
+            Estate &amp; Industrial
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4-STEP ENGINEERING PROCESS & ABOUT UGO GREEN ==================== -->
+  <section id="process" class="py-16 lg:py-24 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 mb-3">
+          Zero Guesswork Engineering
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Our 4-Step Solar Deployment Standard
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">
+          Every UgoGreen Energy system follows strict electrical safety standards, proper DC/AC cable sizing, and surge protection protocols.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Step 1 -->
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+          <span class="w-10 h-10 rounded-2xl bg-emerald-800 text-amber-400 font-display font-extrabold flex items-center justify-center text-base mb-5">
+            01
+          </span>
+          <h3 class="font-display font-bold text-lg text-slate-900">Energy Audit &amp; Load Profiling</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Our engineers measure actual amp draws across your distribution board (DB), identify inductive surge loads, and inspect roof orientation.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+          <span class="w-10 h-10 rounded-2xl bg-emerald-800 text-amber-400 font-display font-extrabold flex items-center justify-center text-base mb-5">
+            02
+          </span>
+          <h3 class="font-display font-bold text-lg text-slate-900">Custom Engineering &amp; Shading Analysis</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            We model daily solar harvest for your specific Nigerian state irradiance, design anodized wind-rated mounting rails, and issue a transparent BoQ.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+          <span class="w-10 h-10 rounded-2xl bg-emerald-800 text-amber-400 font-display font-extrabold flex items-center justify-center text-base mb-5">
+            03
+          </span>
+          <h3 class="font-display font-bold text-lg text-slate-900">Certified Installation &amp; Surge Protection</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Neat trunking, UV-resistant 6mm² solar DC cables, lightning arrestors, and dedicated copper earth pits to protect your appliances from grid spikes.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 relative">
+          <span class="w-10 h-10 rounded-2xl bg-emerald-800 text-amber-400 font-display font-extrabold flex items-center justify-center text-base mb-5">
+            04
+          </span>
+          <h3 class="font-display font-bold text-lg text-slate-900">Smart App Monitoring &amp; Maintenance</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Track live solar generation, battery percentage, and home consumption from your phone anywhere in the world, backed by our rapid field team.
+          </p>
+        </div>
+  <!-- ==================== FOUNDER & ENGINEERING GUARANTEE BANNER ==================== -->
+  <section id="about" class="py-16 lg:py-20 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white p-8 sm:p-12 border border-emerald-800 shadow-xl">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 space-y-4">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="award" class="w-4 h-4"></i> Founder's Engineering Pledge
+            </span>
+            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+              "Great solar performance begins with sound electrical engineering—proper earthing, balanced phases, and zero shortcuts."
+            </h3>
+            <p class="text-emerald-100/90 text-sm sm:text-base leading-relaxed">
+              Founded by <strong class="text-amber-300">Ugo Green</strong>, UgoGreen Engineering bridges the gap between clean solar energy and heavy-duty electrical power distribution in Nigeria. Whether we are wiring a new commercial plaza from the transformer incomer or commissioning a 3-phase hybrid lithium mini-grid, every circuit is engineered to IEC/NEMSA standards.
+            </p>
+            <div class="pt-2 flex flex-wrap items-center gap-6">
+              <div>
+                <p class="font-display font-bold text-lg text-white">Ugo Green</p>
+                <p class="text-xs text-amber-400 font-semibold">Founder &amp; Principal Solar / Electrical Engineer</p>
+              </div>
+              <div class="h-8 w-px bg-emerald-700 hidden sm:block"></div>
+              <div class="flex items-center gap-2 text-xs text-emerald-200">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-400"></i>
+                <span>Nationwide Engineering &amp; Installation Across All 36 States &amp; FCT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col gap-3">
+            <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'Direct Consultation with Ugo Green Engineering Team')"
+                    class="w-full py-4 px-6 rounded-2xl font-display font-bold text-base bg-amber-500 hover:bg-amber-400 text-emerald-950 shadow-lg transition-all text-center">
+              Schedule Engineering Audit
+            </button>
+            <a href="tel:+2348008464733"
+               class="w-full py-3.5 px-6 rounded-2xl font-display font-bold text-sm bg-white/10 hover:bg-white/15 border border-white/20 text-white transition-all flex items-center justify-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-amber-400"></i>
+              <span>Call Engineering Desk: +234 800 UGO GREEN</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-emerald-950 text-emerald-200 border-t border-emerald-900 pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-emerald-900">
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-800 flex items-center justify-center text-amber-400">
+              <i data-lucide="sun" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-xl text-white block leading-none">
+                UgoGreen<span class="text-amber-400">.</span>
+              </span>
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-emerald-400">
+                Solar &amp; Electrical Engineering
+              </span>
+            </div>
+          </div>
+          <p class="text-sm text-emerald-300/80 leading-relaxed">
+            Premier Solar PV, LiFePO4 Energy Storage, Industrial Wiring, ATS Panels, Earthing &amp; Power Distribution Engineering across Nigeria.
+          </p>
+          <p class="text-xs text-amber-400 font-semibold">
+            RC: 1948271 • NEMSA &amp; COREN-Standard Engineering
+          </p>
+        </div>
+
+        <!-- Lagos Regional Office -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-white text-base">Lagos Engineering Hub</h4>
+          <p class="text-sm text-emerald-300/90 flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 shrink-0 mt-1"></i>
+            <span>Plot 14B, Admiralty Way, Lekki Phase 1, Lagos State, Nigeria</span>
+          </p>
+          <p class="text-sm text-emerald-300/90 flex items-center gap-2.5">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-400 shrink-0"></i>
+            <span>+234 (0) 809 555 0192</span>
+          </p>
+          <p class="text-sm text-emerald-300/90 flex items-center gap-2.5">
+            <i data-lucide="clock" class="w-4 h-4 text-amber-400 shrink-0"></i>
+            <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+          </p>
+        </div>
+
+        <!-- Abuja & South-East Hub -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-white text-base">Abuja &amp; Eastern Operations</h4>
+          <p class="text-sm text-emerald-300/90 flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 shrink-0 mt-1"></i>
+            <span>Suite 304, Sterling Plaza, Central Business District, Abuja FCT</span>
+          </p>
+          <p class="text-sm text-emerald-300/90 flex items-start gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-amber-400 shrink-0 mt-1"></i>
+            <span>28 Independence Layout, Enugu &amp; GRA Phase 2, Port Harcourt</span>
+          </p>
+        </div>
+
+        <!-- 24/7 Emergency Support -->
+        <div class="space-y-3">
+          <h4 class="font-display font-bold text-white text-base">24/7 Technical Support</h4>
+          <p class="text-sm text-emerald-300/80">
+            Existing UgoGreen client needing remote diagnostics or rapid dispatch?
+          </p>
+          <div class="p-3.5 rounded-2xl bg-emerald-900/80 border border-emerald-800">
+            <span class="text-xs text-amber-400 font-bold block uppercase">Emergency Field Line</span>
+            <span class="font-display font-extrabold text-lg text-white">+234 800 UGO GREEN</span>
+            <span class="text-xs text-emerald-300 block mt-0.5">support@ugogreenenergy.ng</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-400">
+        <p>&copy; <span id="current-year">2026</span> UgoGreen Engineering Ltd (Founded by Ugo Green). All Rights Reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#calculator" class="hover:text-white transition-colors">Load Calculator</a>
+          <a href="#competence" class="hover:text-white transition-colors">Eng. Standards</a>
+          <button onclick="openAuditModal('Combined Solar + Full Electrical Engineering', 'Footer Engineering Quote Request')" class="text-amber-400 hover:underline font-semibold">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE SITE AUDIT & ENGINEERING CONSULTATION MODAL (#booking) ==================== -->
+  <div id="booking" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden my-8">
+      <!-- Modal Header -->
+      <div class="bg-emerald-950 text-white px-6 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-500 text-emerald-950 flex items-center justify-center">
+            <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-white">Book Engineering Consultation &amp; Site Audit</h3>
+            <p class="text-xs text-emerald-300">UgoGreen Solar &amp; Electrical Engineering • Response within 2 hours</p>
+          </div>
+        </div>
+        <button onclick="closeAuditModal()" aria-label="Close Modal" class="p-2 rounded-xl text-emerald-300 hover:text-white hover:bg-emerald-900 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Form View -->
+      <form id="audit-form" onsubmit="handleAuditSubmit(event)" class="p-6 sm:p-8 space-y-5">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="client-name" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Full Name / Organization *
+            </label>
+            <input type="text" id="client-name" required placeholder="e.g. Engr. Chinedu Okafor"
+                   class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm" />
+          </div>
+          <div>
+            <label for="client-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Phone / WhatsApp Number *
+            </label>
+            <input type="tel" id="client-phone" required placeholder="e.g. 0803 123 4567"
+                   class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm" />
+          </div>
+        </div>
+
+        <!-- Service Discipline & Specific Service Selector -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="service-discipline" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Service Discipline *
+            </label>
+            <select id="service-discipline" onchange="updateServiceDropdownOptions()" required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm bg-white font-semibold text-emerald-950">
+              <option value="Combined Solar + Full Electrical Engineering">Combined Solar + Full Electrical Wiring</option>
+              <option value="Solar Installation">Solar Installation &amp; Storage</option>
+              <option value="Electrical Engineering">Electrical Engineering &amp; Power</option>
+            </select>
+          </div>
+          <div>
+            <label for="specific-service" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Specific Engineering Service *
+            </label>
+            <select id="specific-service" required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm bg-white">
+              <!-- Populated dynamically via JS -->
+            </select>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="client-state" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Nigerian State &amp; City *
+            </label>
+            <select id="client-state" required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm bg-white">
+              <option value="">Select Nigerian State &amp; City...</option>
+              <option value="Lagos (Lekki / VI / Ikoyi / Mainland)">Lagos (Lekki / VI / Ikoyi / Mainland)</option>
+              <option value="Abuja FCT (Maitama / Wuse / Gwarinpa)">Abuja FCT (Maitama / Wuse / Gwarinpa)</option>
+              <option value="Rivers (Port Harcourt)">Rivers (Port Harcourt)</option>
+              <option value="Enugu (Enugu Metropolis)">Enugu (Enugu Metropolis)</option>
+              <option value="Anambra (Awka / Onitsha / Nnewi)">Anambra (Awka / Onitsha / Nnewi)</option>
+              <option value="Imo (Owerri)">Imo (Owerri)</option>
+              <option value="Abia (Umuahia / Aba)">Abia (Umuahia / Aba)</option>
+              <option value="Delta (Asaba / Warri)">Delta (Asaba / Warri)</option>
+              <option value="Edo (Benin City)">Edo (Benin City)</option>
+              <option value="Oyo (Ibadan)">Oyo (Ibadan)</option>
+              <option value="Ogun (Abeokuta / Mowe / Sagamu)">Ogun (Abeokuta / Mowe / Sagamu)</option>
+              <option value="Akwa Ibom (Uyo)">Akwa Ibom (Uyo)</option>
+              <option value="Cross River (Calabar)">Cross River (Calabar)</option>
+              <option value="Kaduna (Kaduna)">Kaduna (Kaduna)</option>
+              <option value="Kano (Kano)">Kano (Kano)</option>
+              <option value="Other Nigerian State">Other Nigerian State</option>
+            </select>
+          </div>
+          <div>
+            <label for="property-type" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+              Property Scale / Facility *
+            </label>
+            <select id="property-type" required
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm bg-white">
+              <option value="Residential Duplex / Villa">Residential Duplex / Villa</option>
+              <option value="Residential Flat / Bungalow">Residential Flat / Bungalow</option>
+              <option value="Commercial Office / Plaza">Commercial Office / Plaza</option>
+              <option value="Hospital / Clinic / Laboratory">Hospital / Clinic / Laboratory</option>
+              <option value="Hotel / Lounge / Supermarket">Hotel / Lounge / Supermarket</option>
+              <option value="Industrial Factory / Warehouse">Industrial Factory / Warehouse</option>
+              <option value="Gated Estate / Community Mini-Grid">Gated Estate / Community Mini-Grid</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="selected-specs" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+            Project Scope, Package, or Calculated Load Specification
+          </label>
+          <textarea id="selected-specs" rows="3"
+                    class="w-full px-4 py-3 rounded-xl border border-emerald-300 bg-emerald-50/60 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-700/20 outline-none text-sm font-medium text-emerald-950"
+                    placeholder="Describe your solar/electrical requirements or use the calculator/service cards to auto-fill..."></textarea>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+          <button type="button" onclick="closeAuditModal()"
+                  class="w-full sm:w-auto px-5 py-3 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 transition-colors">
+            Cancel
+          </button>
+          <button type="submit"
+                  class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-display font-bold text-sm bg-emerald-800 hover:bg-emerald-700 text-white shadow-lg flex items-center justify-center gap-2 transition-all">
+            <span>Confirm Audit &amp; Generate Slip</span>
+            <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Modal Confirmation & Printable Receipt View (Hidden initially) -->
+      <div id="audit-confirmation" class="hidden p-6 sm:p-8 space-y-6">
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200">
+          <div class="w-11 h-11 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-display font-extrabold text-lg text-emerald-950">Engineering Service &amp; Site Audit Logged!</h4>
+            <p class="text-sm text-emerald-800 mt-0.5">
+              Thank you! Principal Engineer <strong>Ugo Green’s</strong> engineering dispatch desk has logged your request and will contact you via WhatsApp/Phone shortly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Summary Receipt Card -->
+        <div id="receipt-box" class="rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 p-5 space-y-3 text-sm">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <div>
+              <span class="font-display font-extrabold text-base text-emerald-950">UGOGREEN ENGINEERING LTD</span>
+              <span class="text-xs text-slate-500 block">Engineering Service &amp; Site Audit Slip</span>
+            </div>
+            <span id="receipt-ref" class="px-3 py-1 rounded-lg bg-emerald-900 text-amber-400 font-mono font-bold text-xs">
+              #UG-2026-884
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-y-2 text-xs sm:text-sm pt-1">
+            <span class="text-slate-500">Client / Org:</span>
+            <span id="rec-name" class="font-bold text-slate-900 text-right">-</span>
+
+            <span class="text-slate-500">Phone / WhatsApp:</span>
+            <span id="rec-phone" class="font-bold text-slate-900 text-right">-</span>
+
+            <span class="text-slate-500">Discipline:</span>
+            <span id="rec-discipline" class="font-bold text-emerald-800 text-right">-</span>
+
+            <span class="text-slate-500">Selected Service:</span>
+            <span id="rec-service" class="font-bold text-slate-900 text-right">-</span>
+
+            <span class="text-slate-500">Location:</span>
+            <span id="rec-state" class="font-bold text-slate-900 text-right">-</span>
+
+            <span class="text-slate-500">Facility Scale:</span>
+            <span id="rec-property" class="font-bold text-slate-900 text-right">-</span>
+          </div>
+
+          <div class="pt-3 border-t border-slate-200">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1">Engineering Scope / Load Spec:</span>
+            <p id="rec-specs" class="text-xs sm:text-sm font-semibold text-emerald-900 bg-white p-3 rounded-xl border border-slate-200">
+              -
+            </p>
+          </div>
+        </div>
+
+        <!-- Receipt Actions -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button onclick="copySummaryToClipboard()" id="copy-btn"
+                  class="flex-1 py-3 px-4 rounded-xl font-display font-bold text-sm bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="copy" class="w-4 h-4 text-amber-400"></i>
+            <span>Copy Summary</span>
+          </button>
+          <button onclick="window.print()"
+                  class="flex-1 py-3 px-4 rounded-xl font-display font-bold text-sm bg-emerald-100 hover:bg-emerald-200 text-emerald-950 flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="printer" class="w-4 h-4"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <a id="whatsapp-direct-link" href="#" target="_blank" rel="noopener noreferrer"
+             class="flex-1 py-3 px-4 rounded-xl font-display font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Send on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT APPLICATION LOGIC ==================== -->
+  <script>
+    // 0. DUAL-TRACK SOLAR & ELECTRICAL ENGINEERING SERVICES CATALOG
+    const engineeringServices = [
+      // Track A — Solar Installation & Energy Storage Services
+      {
+        id: 'solar-1',
+        track: 'solar',
+        disciplineLabel: 'Solar Installation',
+        badge: 'Solar PV Systems',
+        icon: 'sun',
+        title: 'Hybrid & Off-Grid Solar PV Design & Installation',
+        summary: 'High-yield monocrystalline N-Type bifacial roof and ground-mount arrays engineered for tropical irradiance and wind loads.',
+        deliverables: [
+          'MPPT string voltage & current sizing',
+          '3D shading analysis & anodized racking',
+          'UV-rated 6mm² DC cabling & IP65 combiners'
+        ],
+        standards: ['IEC 62446', 'PVsyst Verified']
+      },
+      {
+        id: 'solar-2',
+        track: 'solar',
+        disciplineLabel: 'Solar Installation',
+        badge: 'Energy Storage',
+        icon: 'battery-charging',
+        title: 'Lithium (LiFePO4) Battery Bank & Inverter Integration',
+        summary: 'Grade-A 48V rack-mounted and high-voltage LiFePO4 battery banks with closed-loop BMS communication and parallel 3-phase inverters.',
+        deliverables: [
+          'CAN/RS485 closed-loop BMS integration',
+          'Parallel 3-phase inverter synchronization',
+          'DC busbar & Class-T fuse protection'
+        ],
+        standards: ['UL 1973 / IEC 62619', '6,000+ Cycles']
+      },
+      {
+        id: 'solar-3',
+        track: 'solar',
+        disciplineLabel: 'Solar Installation',
+        badge: 'Commercial EPC',
+        icon: 'factory',
+        title: 'Commercial & Industrial Solar Mini-Grids',
+        summary: 'Turnkey peak-shaving C&I solar microgrids for hotels, hospitals, factories, and estates with seamless diesel-solar-grid orchestration.',
+        deliverables: [
+          'Diesel-solar-grid ATS synchronization',
+          'Zero-export & peak-shaving controllers',
+          '24/7 SCADA & cloud telemetry monitoring'
+        ],
+        standards: ['NERC Mini-Grid Code', 'NEMSA Certified']
+      },
+      {
+        id: 'solar-4',
+        track: 'solar',
+        disciplineLabel: 'Solar Installation',
+        badge: 'Solar Infrastructure',
+        icon: 'droplets',
+        title: 'Solar Street Lighting, Borehole & Agricultural Pumping',
+        summary: 'Reliable off-grid solar water pumping and all-in-one municipal/estate LED street lighting systems built for zero fuel operation.',
+        deliverables: [
+          'DC/AC solar submersible pump controllers',
+          'MPPT Variable Frequency Drives (VFD)',
+          'Galvanized poles & LiFePO4 street lights'
+        ],
+        standards: ['IP66 Weatherproof', 'IEC 62253']
+      },
+      {
+        id: 'solar-5',
+        track: 'solar',
+        disciplineLabel: 'Solar Installation',
+        badge: 'O&M & Retrofits',
+        icon: 'wrench',
+        title: 'Preventive Maintenance, Energy Audits & System Retrofits',
+        summary: 'Diagnostic health checks, thermal hotspot detection, and safe upgrades of failing lead-acid setups to smart LiFePO4 storage.',
+        deliverables: [
+          'Infrared thermal imaging hotspot scan',
+          'IV-curve tracing & string diagnostics',
+          'Lead-acid to LiFePO4 battery retrofits'
+        ],
+        standards: ['IEC 62446-3', 'SLA Support']
+      },
+
+      // Track B — Core Electrical Engineering Services
+      {
+        id: 'elec-1',
+        track: 'electrical',
+        disciplineLabel: 'Electrical Engineering',
+        badge: 'Wiring & Conduit',
+        icon: 'cable',
+        title: 'Residential, Commercial & Industrial Wiring & Conduit Systems',
+        summary: 'Complete 1st & 2nd fix surface/concealed PVC and galvanized steel conduit installations with precision phase load balancing.',
+        deliverables: [
+          '1st & 2nd fix PVC & galvanized steel conduits',
+          'Balanced load distribution across R-Y-B phases',
+          'Armored SWA underground feeder cabling'
+        ],
+        standards: ['IEC 60364', 'IEE BS 7671']
+      },
+      {
+        id: 'elec-2',
+        track: 'electrical',
+        disciplineLabel: 'Electrical Engineering',
+        badge: 'Control Panels',
+        icon: 'cpu',
+        title: 'Distribution Boards (DB), ATS & Changeover Panel Engineering',
+        summary: 'Custom-fabricated Automatic Transfer Switches, motorized changeover panels, and main LV distribution boards with full fault protection.',
+        deliverables: [
+          'Motorized & contactor-based 3-phase ATS',
+          'MCCB, RCBO, ELCB & phase-failure relays',
+          'Busbar chamber fabrication & labeling'
+        ],
+        standards: ['IEC 61439', 'IP54/IP65 Enclosures']
+      },
+      {
+        id: 'elec-3',
+        track: 'electrical',
+        disciplineLabel: 'Electrical Engineering',
+        badge: 'Earthing & Surge',
+        icon: 'shield-alert',
+        title: 'Earthing, Lightning Protection & Surge Arrestor Systems',
+        summary: 'Low-impedance chemical copper earthing pits, air-terminal lightning arrestors, and Type 1+2 SPDs protecting sensitive electronics.',
+        deliverables: [
+          'Copper-bonded rods & chemical earth pits',
+          'Verified soil & earth resistance < 2.0 Ohms',
+          'Type 1+2 AC/DC Surge Protection Devices'
+        ],
+        standards: ['IEC 62305', 'IEEE Std 80']
+      },
+      {
+        id: 'elec-4',
+        track: 'electrical',
+        disciplineLabel: 'Electrical Engineering',
+        badge: 'HV/LV Power',
+        icon: 'gauge',
+        title: 'Transformer, Generator & Power Factor Correction Integration',
+        summary: 'Step-down distribution transformer commissioning, automatic capacitor banks to eliminate reactive penalties, and motor control centers.',
+        deliverables: [
+          '11kV/33kV step-down transformer commissioning',
+          'Automatic detuned capacitor bank PF correction',
+          'Industrial Motor Control Centers (MCC)'
+        ],
+        standards: ['IEEE C57', 'NEMSA Grid Code']
+      },
+      {
+        id: 'elec-5',
+        track: 'electrical',
+        disciplineLabel: 'Electrical Engineering',
+        badge: 'Audits & Compliance',
+        icon: 'file-check-2',
+        title: 'Electrical Load Audits, Single-Line Diagrams (SLD) & NEMSA Compliance',
+        summary: 'Comprehensive electrical safety audits, AutoCAD schematics, and statutory documentation for NEMSA/NERC inspection approval.',
+        deliverables: [
+          'AutoCAD Single-Line Diagrams (SLD) & schedules',
+          'Short-circuit & voltage-drop calculations',
+          'Megger insulation & NEMSA inspection readiness'
+        ],
+        standards: ['NEMSA / NERC', 'COREN Standard']
+      }
+    ];
+
+    // Render Dual-Track Services Matrix
+    function renderServices(filter = 'all') {
+      const grid = document.getElementById('services-grid');
+      const filtered = filter === 'all'
+        ? engineeringServices
+        : engineeringServices.filter(s => s.track === filter);
+
+      grid.innerHTML = filtered.map(service => {
+        const isSolar = service.track === 'solar';
+        return `
+          <div class="rounded-3xl border border-slate-200/90 bg-slate-50/60 hover:bg-white p-6 flex flex-col justify-between hover:border-emerald-600 hover:shadow-xl transition-all group">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="px-3 py-1 rounded-full text-xs font-bold ${
+                  isSolar
+                    ? 'bg-amber-100 text-amber-900'
+                    : 'bg-emerald-100 text-emerald-900'
+                }">
+                  ${service.badge}
+                </span>
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center ${
+                  isSolar
+                    ? 'bg-amber-500/15 text-amber-600 group-hover:bg-amber-500 group-hover:text-emerald-950'
+                    : 'bg-emerald-800/10 text-emerald-800 group-hover:bg-emerald-800 group-hover:text-amber-400'
+                } transition-colors">
+                  <i data-lucide="${service.icon}" class="w-5 h-5"></i>
+                </div>
+              </div>
+
+              <h3 class="font-display font-extrabold text-lg text-slate-900 leading-snug">
+                ${service.title}
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed">
+                ${service.summary}
+              </p>
+
+              <!-- Technical Deliverables -->
+              <ul class="mt-4 pt-4 border-t border-slate-200/80 space-y-2 text-xs text-slate-700">
+                ${service.deliverables.map(item => `
+                  <li class="flex items-start gap-2">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 ${isSolar ? 'text-amber-600' : 'text-emerald-700'} shrink-0 mt-0.5"></i>
+                    <span>${item}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200/80 space-y-3">
+              <!-- Standards Compliance Tags -->
+              <div class="flex flex-wrap gap-1.5">
+                ${service.standards.map(std => `
+                  <span class="px-2.5 py-0.5 rounded-md bg-slate-200/80 text-slate-700 font-mono text-[11px] font-semibold">
+                    ${std}
+                  </span>
+                `).join('')}
+              </div>
+
+              <button onclick="requestSpecificService('${service.id}')"
+                      class="w-full py-3 px-4 rounded-xl font-display font-bold text-xs sm:text-sm bg-emerald-900 hover:bg-emerald-800 text-white flex items-center justify-center gap-2 transition-colors">
+                <span>Request Service</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-amber-400"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function filterServices(category) {
+      document.querySelectorAll('.service-tab-btn').forEach(btn => {
+        if (btn.dataset.serviceFilter === category) {
+          btn.className = 'service-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold bg-emerald-900 text-white shadow-md transition-all flex items-center gap-2';
+        } else {
+          btn.className = 'service-tab-btn px-5 py-3 rounded-2xl text-xs sm:text-sm font-display font-bold bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200 transition-all flex items-center gap-2';
+        }
+      });
+      renderServices(category);
+    }
+
+    function requestSpecificService(serviceId) {
+      const service = engineeringServices.find(s => s.id === serviceId);
+      if (!service) return;
+      openAuditModal(
+        service.disciplineLabel,
+        `Service Inquiry: ${service.title} (${service.standards.join(', ')})`,
+        service.title
+      );
+    }
+
+    // 1. NIGERIAN HOUSEHOLD & OFFICE APPLIANCE DATABASE
+    const appliances = [
+      { id: 'led_bulbs', name: 'LED Energy Bulbs', watts: 15, qty: 10, icon: 'lightbulb' },
+      { id: 'ceiling_fan', name: 'Ceiling / Standing Fan', watts: 75, qty: 3, icon: 'fan' },
+      { id: 'led_tv', name: 'LED / Smart TV (43"–65")', watts: 120, qty: 1, icon: 'tv' },
+      { id: 'router_laptop', name: 'Starlink / Router & Laptops', watts: 110, qty: 2, icon: 'laptop' },
+      { id: 'fridge', name: 'Inverter Refrigerator', watts: 180, qty: 1, icon: 'snowflake' },
+      { id: 'freezer', name: 'Chest Deep Freezer', watts: 250, qty: 0, icon: 'box' },
+      { id: 'ac_1hp', name: '1.0 HP Inverter AC', watts: 900, qty: 0, icon: 'wind' },
+      { id: 'ac_1_5hp', name: '1.5 HP Inverter AC', watts: 1250, qty: 1, icon: 'wind' },
+      { id: 'washing_machine', name: 'Washing Machine', watts: 500, qty: 0, icon: 'refresh-cw' },
+      { id: 'water_pump', name: '1.0 HP Borehole Pump', watts: 750, qty: 0, icon: 'droplets' },
+    ];
+
+    let backupHours = 12;
+    let currentCalculatedSummary = '';
+
+    // 2. COMPLETED NIGERIAN PROJECTS DATA
+    const projectsData = [
+      {
+        title: '5-Bedroom Detached Duplex — Lekki Phase 1',
+        location: 'Lekki Phase 1, Lagos State',
+        category: 'residential',
+        badge: 'Residential Villa',
+        specs: '10kVA Deye Hybrid + 20.48kWh LiFePO4 + 9.9kWp Panels',
+        savings: '₦520,000 / mo saved on diesel',
+        description: 'Full 24/7 off-grid autonomy powering 3 Inverter ACs, cold room freezer, borehole pump, and smart home automation.',
+        image: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        title: 'Diplomatic Residence — Maitama District',
+        location: 'Maitama, Abuja FCT',
+        category: 'residential',
+        badge: 'Residential Executive',
+        specs: '15kVA 3-Phase Victron + 30kWh Pylontech Lithium',
+        savings: '99.2% annual uptime achieved',
+        description: 'Seamless zero-transfer-time (<10ms) backup architecture integrated with existing grid and automated generator failover.',
+        image: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        title: 'Specialist Diagnostic Clinic & Lab',
+        location: 'GRA Phase 2, Port Harcourt, Rivers',
+        category: 'commercial',
+        badge: 'Commercial Healthcare',
+        specs: '20kVA 3-Phase Hybrid + 40kWh LiFePO4 + 16.5kWp Array',
+        savings: '₦890,000 / mo diesel reduction',
+        description: 'Clean pure-sine power protecting sensitive hematology analyzers, ultrasound units, and vaccine refrigeration 24 hours daily.',
+        image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        title: 'Emerald Court Gated Estate Streetlight & Gatehouse',
+        location: 'Independence Layout, Enugu State',
+        category: 'industrial',
+        badge: 'Estate Mini-Grid',
+        specs: '30kVA Industrial Mini-Grid + 60kWh High-Voltage Lithium',
+        savings: '100% elimination of estate night generator',
+        description: 'Centralized solar mini-grid powering estate security perimeter lighting, electric fencing, water treatment plant, and clubhouse.',
+        image: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        title: 'Boutique Hotel & Executive Suites (28 Rooms)',
+        location: 'New Owerri, Imo State',
+        category: 'commercial',
+        badge: 'Commercial Hospitality',
+        specs: '50kVA 3-Phase Parallel + 100kWh LiFePO4 + 38.5kWp Roof Array',
+        savings: '₦1.85M / mo operating cost saved',
+        description: 'Eliminated daytime diesel consumption completely while running guest room ACs, kitchen freezers, and laundry systems.',
+        image: 'https://images.unsplash.com/photo-1566093097221-ac2335b09e70?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        title: '4-Bedroom Smart Terrace Duplex',
+        location: 'Bodija GRA, Ibadan, Oyo State',
+        category: 'residential',
+        badge: 'Residential Smart Home',
+        specs: '5kVA Hybrid + 10.24kWh LiFePO4 + 5.5kWp Mono Panels',
+        savings: '₦240,000 / mo PMS fuel saved',
+        description: 'Compact wall-mounted lithium installation running 1.5HP inverter AC overnight, deep freezer, TVs, and remote work office.',
+        image: 'https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=900&q=80'
+      }
+    ];
+
+    // Format numbers in Nigerian Naira
+    function formatNaira(amount) {
+      return '₦' + Math.round(amount).toLocaleString('en-NG');
+    }
+
+    // Render Appliance Controls
+    function renderAppliances() {
+      const container = document.getElementById('appliance-list');
+      container.innerHTML = appliances.map((item, idx) => `
+        <div class="flex items-center justify-between p-3.5 rounded-2xl border transition-all ${
+          item.qty > 0 ? 'border-emerald-600/60 bg-emerald-50/40' : 'border-slate-200 bg-white'
+        }">
+          <div class="flex items-center gap-3 min-w-0">
+            <div class="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+              item.qty > 0 ? 'bg-emerald-800 text-amber-400' : 'bg-slate-100 text-slate-500'
+            }">
+              <i data-lucide="${item.icon}" class="w-4 h-4"></i>
+            </div>
+            <div class="truncate">
+              <p class="font-semibold text-xs sm:text-sm text-slate-900 truncate">${item.name}</p>
+              <p class="text-[11px] text-slate-500">${item.watts}W each</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0 ml-2">
+            <button type="button" onclick="updateQty(${idx}, -1)" aria-label="Decrease ${item.name}"
+                    class="w-8 h-8 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-slate-700 font-bold flex items-center justify-center transition-colors">
+              -
+            </button>
+            <span class="w-6 text-center font-display font-bold text-sm text-slate-900">${item.qty}</span>
+            <button type="button" onclick="updateQty(${idx}, 1)" aria-label="Increase ${item.name}"
+                    class="w-8 h-8 rounded-lg bg-emerald-800 hover:bg-emerald-700 text-white font-bold flex items-center justify-center transition-colors">
+              +
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+      calculateSolarSystem();
+    }
+
+    // Update Appliance Quantity
+    function updateQty(index, delta) {
+      appliances[index].qty = Math.max(0, Math.min(30, appliances[index].qty + delta));
+      renderAppliances();
+    }
+
+    // Set Daily Backup Autonomy Hours
+    function setBackupHours(hours) {
+      backupHours = hours;
+      document.getElementById('backup-hours-label').textContent = `${hours} Hours Autonomy`;
+
+      document.querySelectorAll('.backup-btn').forEach(btn => {
+        const btnHours = Number(btn.dataset.hours);
+        if (btnHours === hours) {
+          btn.className = 'backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-emerald-700 bg-emerald-800 text-white shadow-md';
+          btn.querySelector('span').className = 'block text-[10px] font-normal text-emerald-200';
+        } else {
+          btn.className = 'backup-btn py-3 px-2 rounded-xl border text-center font-display font-bold text-sm transition-all border-slate-200 bg-slate-50 text-slate-700 hover:border-emerald-600';
+          btn.querySelector('span').className = 'block text-[10px] font-normal text-slate-500';
+        }
+      });
+
+      calculateSolarSystem();
+    }
+
+    // Apply Quick Load Presets
+    function applyPreset(type) {
+      const presets = {
+        flat: { led_bulbs: 8, ceiling_fan: 3, led_tv: 1, router_laptop: 2, fridge: 1, freezer: 0, ac_1hp: 0, ac_1_5hp: 0, washing_machine: 0, water_pump: 0, hours: 12 },
+        duplex: { led_bulbs: 14, ceiling_fan: 4, led_tv: 2, router_laptop: 2, fridge: 1, freezer: 1, ac_1hp: 0, ac_1_5hp: 1, washing_machine: 0, water_pump: 1, hours: 12 },
+        executive: { led_bulbs: 20, ceiling_fan: 5, led_tv: 3, router_laptop: 3, fridge: 1, freezer: 1, ac_1hp: 1, ac_1_5hp: 2, washing_machine: 1, water_pump: 1, hours: 18 },
+        office: { led_bulbs: 18, ceiling_fan: 4, led_tv: 2, router_laptop: 8, fridge: 1, freezer: 0, ac_1hp: 0, ac_1_5hp: 2, washing_machine: 0, water_pump: 0, hours: 12 }
+      };
+
+      const selected = presets[type];
+      if (!selected) return;
+
+      appliances.forEach(app => {
+        app.qty = selected[app.id] !== undefined ? selected[app.id] : 0;
+      });
+
+      setBackupHours(selected.hours);
+      renderAppliances();
+    }
+
+    function resetCalculator() {
+      appliances.forEach(app => app.qty = 0);
+      setBackupHours(12);
+      renderAppliances();
+    }
+
+    // Core Solar Sizing Engineering Formula
+    function calculateSolarSystem() {
+      let totalWatts = 0;
+      let totalItems = 0;
+
+      appliances.forEach(item => {
+        totalWatts += item.watts * item.qty;
+        totalItems += item.qty;
+      });
+
+      document.getElementById('active-items-count').textContent = totalItems;
+      document.getElementById('calc-total-watts').textContent = `${totalWatts.toLocaleString()} W`;
+
+      // Apparent power in kVA (0.8 power factor)
+      const kvaDemand = totalWatts / 800;
+      document.getElementById('calc-total-kva').textContent = `${kvaDemand.toFixed(2)} kVA Demand`;
+
+      // Recommended Standard Hybrid Inverter Size (with 25% surge safety headroom)
+      const requiredKva = kvaDemand * 1.25;
+      let inverterLabel = '3.5 kVA';
+      let inverterNumeric = 3.5;
+
+      if (requiredKva <= 3.2) {
+        inverterLabel = '3.5 kVA';
+        inverterNumeric = 3.5;
+      } else if (requiredKva <= 4.8) {
+        inverterLabel = '5.0 kVA';
+        inverterNumeric = 5.0;
+      } else if (requiredKva <= 7.5) {
+        inverterLabel = '8.0 kVA';
+        inverterNumeric = 8.0;
+      } else if (requiredKva <= 9.8) {
+        inverterLabel = '10.0 kVA';
+        inverterNumeric = 10.0;
+      } else if (requiredKva <= 14.5) {
+        inverterLabel = '15.0 kVA';
+        inverterNumeric = 15.0;
+      } else {
+        const customKva = Math.ceil(requiredKva / 5) * 5;
+        inverterLabel = `${customKva}.0 kVA (3-Phase)`;
+        inverterNumeric = customKva;
+      }
+
+      // Battery Sizing: Diversity factor (0.65 average continuous draw over backup window) & 85% DoD for LiFePO4
+      const effectiveWatts = Math.max(totalWatts * 0.65, 250);
+      const requiredKwh = (effectiveWatts * backupHours) / (1000 * 0.85);
+      // Round up to standard 5.12kWh LiFePO4 battery modules
+      const batteryModules = Math.max(1, Math.ceil(requiredKwh / 5.12));
+      const totalBatteryKwh = (batteryModules * 5.12).toFixed(2);
+
+      // Solar Array Sizing: Recharge battery bank + daytime load within 4.8 peak sun hours in Nigeria
+      const dailyEnergyNeededKwh = (totalBatteryKwh * 1.15) + ((totalWatts * 4) / 1000);
+      const requiredSolarKw = Math.max(2.2, dailyEnergyNeededKwh / 4.5);
+      const panelCount = Math.max(4, Math.ceil((requiredSolarKw * 1000) / 550));
+      const totalArrayKwp = ((panelCount * 550) / 1000).toFixed(2);
+
+      // Realistic Turnkey Nigerian Engineering Cost Estimate (2026 Market Rates)
+      const inverterCost = inverterNumeric * 245000;
+      const batteryCost = batteryModules * 1450000;
+      const panelAndMountCost = panelCount * 155000;
+      const bosAndInstallCost = 350000 + (inverterNumeric * 35000);
+      const totalEstimatedCost = totalWatts === 0 ? 2850000 : (inverterCost + batteryCost + panelAndMountCost + bosAndInstallCost);
+
+      // Monthly Fuel/Generator Savings Estimate (based on Nigerian petrol/diesel generator burn rate)
+      const dailyGenHours = Math.min(20, backupHours + 2);
+      const litersPerHour = Math.max(1.1, (totalWatts / 1000) * 0.48);
+      const monthlyFuelCost = totalWatts === 0 ? 150000 : (dailyGenHours * litersPerHour * 1050 * 30);
+      const paybackMonths = Math.max(12, Math.round(totalEstimatedCost / monthlyFuelCost));
+
+      // Update UI Elements
+      document.getElementById('calc-inverter').textContent = inverterLabel;
+      document.getElementById('calc-battery').textContent = `${totalBatteryKwh} kWh (${batteryModules} × 5.12kWh LiFePO4)`;
+      document.getElementById('calc-panels').textContent = `${panelCount} Panels (${totalArrayKwp} kWp)`;
+      document.getElementById('calc-cost').textContent = formatNaira(totalEstimatedCost);
+      document.getElementById('calc-savings').textContent = `${formatNaira(monthlyFuelCost)} / month`;
+      document.getElementById('calc-payback').textContent = `~${paybackMonths} Months`;
+
+      // Store summary string for quote form
+      currentCalculatedSummary = `Custom Solar Calculator Spec: ${inverterLabel} Hybrid Inverter | ${totalBatteryKwh}kWh LiFePO4 Lithium Bank | ${panelCount}x 550W Panels (${totalArrayKwp}kWp) | Load: ${totalWatts}W (${backupHours}hrs backup) | Est. Budget: ${formatNaira(totalEstimatedCost)}`;
+    }
+
+    // Send Calculator Estimate directly into Quote Modal
+    function sendEstimateToQuote() {
+      openAuditModal(
+        'Solar Installation',
+        currentCalculatedSummary,
+        'Hybrid & Off-Grid Solar PV Design & Installation'
+      );
+    }
+
+    // Render Completed Nigerian Projects Portfolio
+    function renderProjects(filter = 'all') {
+      const grid = document.getElementById('projects-grid');
+      const filtered = filter === 'all'
+        ? projectsData
+        : projectsData.filter(p => p.category === filter);
+
+      grid.innerHTML = filtered.map(project => `
+        <article class="rounded-3xl bg-white border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
+          <div>
+            <div class="relative aspect-[16/10] bg-emerald-950 overflow-hidden">
+              <img src="${project.image}"
+                   onerror="this.onerror=null;this.src='https://placehold.co/800x500/064e3b/fbbf24?text=UgoGreen+Solar+Project';"
+                   alt="${project.title}"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute top-3 left-3">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-950/85 text-amber-400 backdrop-blur-sm border border-emerald-700/60">
+                  ${project.badge}
+                </span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-white/95 text-slate-900 shadow">
+                  <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-700"></i>
+                  ${project.location}
+                </span>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <h3 class="font-display font-bold text-lg text-slate-900 leading-snug">${project.title}</h3>
+              <p class="text-xs font-bold text-emerald-700 mt-2 bg-emerald-50 px-3 py-1.5 rounded-lg inline-block">
+                ⚡ ${project.specs}
+              </p>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                ${project.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-700 flex items-center gap-1.5">
+              <i data-lucide="trending-down" class="w-4 h-4 text-emerald-600"></i>
+              ${project.savings}
+            </span>
+            <button onclick="openAuditModal('Similar System to: ${project.title} (${project.specs})')"
+                    class="text-xs font-bold text-emerald-800 hover:text-emerald-600 underline">
+              Request Similar
+            </button>
+          </div>
+        </article>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function filterProjects(category) {
+      document.querySelectorAll('.project-filter-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-emerald-800 text-white shadow-sm transition-all';
+        } else {
+          btn.className = 'project-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-600 border border-slate-200 hover:border-emerald-600 transition-all';
+        }
+      });
+      renderProjects(category);
+    }
+
+    // Populate Specific Service Dropdown based on Selected Discipline
+    function updateServiceDropdownOptions(preselectServiceTitle = '') {
+      const discipline = document.getElementById('service-discipline').value;
+      const serviceSelect = document.getElementById('specific-service');
+
+      let filteredList = engineeringServices;
+      if (discipline === 'Solar Installation') {
+        filteredList = engineeringServices.filter(s => s.track === 'solar');
+      } else if (discipline === 'Electrical Engineering') {
+        filteredList = engineeringServices.filter(s => s.track === 'electrical');
+      }
+
+      const optionsHtml = [
+        `<option value="Full Site Audit & Engineering Consultation">Full Site Audit &amp; Engineering Consultation</option>`,
+        ...filteredList.map(s => `<option value="${s.title}">${s.title}</option>`)
+      ];
+
+      serviceSelect.innerHTML = optionsHtml.join('');
+
+      if (preselectServiceTitle) {
+        const matchingOption = Array.from(serviceSelect.options).find(opt => opt.value === preselectServiceTitle);
+        if (matchingOption) {
+          serviceSelect.value = preselectServiceTitle;
+        }
+      }
+    }
+
+    // Modal Open / Close & Form Handling
+    function openAuditModal(discipline = 'Combined Solar + Full Electrical Engineering', prefillSpec = '', preselectService = '') {
+      const modal = document.getElementById('booking');
+      const form = document.getElementById('audit-form');
+      const confirmation = document.getElementById('audit-confirmation');
+      const specField = document.getElementById('selected-specs');
+      const disciplineSelect = document.getElementById('service-discipline');
+
+      form.classList.remove('hidden');
+      confirmation.classList.add('hidden');
+
+      if (discipline && Array.from(disciplineSelect.options).some(o => o.value === discipline)) {
+        disciplineSelect.value = discipline;
+      }
+
+      updateServiceDropdownOptions(preselectService);
+
+      if (prefillSpec) {
+        specField.value = prefillSpec;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeAuditModal() {
+      const modal = document.getElementById('booking');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function handleAuditSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const discipline = document.getElementById('service-discipline').value;
+      const specificService = document.getElementById('specific-service').value;
+      const state = document.getElementById('client-state').value;
+      const property = document.getElementById('property-type').value;
+      const specs = document.getElementById('selected-specs').value.trim() || `${specificService} — Site Audit & Engineering Assessment`;
+
+      const refNum = '#UG-' + new Date().getFullYear() + '-' + Math.floor(100 + Math.random() * 900);
+
+      document.getElementById('receipt-ref').textContent = refNum;
+      document.getElementById('rec-name').textContent = name;
+      document.getElementById('rec-phone').textContent = phone;
+      document.getElementById('rec-discipline').textContent = discipline;
+      document.getElementById('rec-service').textContent = specificService;
+      document.getElementById('rec-state').textContent = state;
+      document.getElementById('rec-property').textContent = property;
+      document.getElementById('rec-specs').textContent = specs;
+
+      const waText = encodeURIComponent(
+        `Hello UgoGreen Engineering (${refNum}),\n` +
+        `Client: ${name}\n` +
+        `Discipline: ${discipline}\n` +
+        `Service: ${specificService}\n` +
+        `Location: ${state}\n` +
+        `Facility: ${property}\n` +
+        `Scope/Spec: ${specs}\n` +
+        `Please schedule my engineering audit.`
+      );
+      document.getElementById('whatsapp-direct-link').href = `https://wa.me/2348008464733?text=${waText}`;
+
+      document.getElementById('audit-form').classList.add('hidden');
+      document.getElementById('audit-confirmation').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    // Safe Clipboard Copy using execCommand fallback
+    function copySummaryToClipboard() {
+      const ref = document.getElementById('receipt-ref').textContent;
+      const name = document.getElementById('rec-name').textContent;
+      const phone = document.getElementById('rec-phone').textContent;
+      const discipline = document.getElementById('rec-discipline').textContent;
+      const service = document.getElementById('rec-service').textContent;
+      const state = document.getElementById('rec-state').textContent;
+      const property = document.getElementById('rec-property').textContent;
+      const specs = document.getElementById('rec-specs').textContent;
+
+      const textToCopy = `UGOGREEN ENGINEERING SERVICE & AUDIT SLIP (${ref})\nClient: ${name} (${phone})\nDiscipline: ${discipline}\nService: ${service}\nLocation: ${state}\nFacility: ${property}\nScope/Spec: ${specs}`;
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+
+      const copyBtn = document.getElementById('copy-btn');
+      const originalHTML = copyBtn.innerHTML;
+      copyBtn.innerHTML = `<i data-lucide="check" class="w-4 h-4 text-emerald-400"></i><span>Copied!</span>`;
+      lucide.createIcons();
+
+      setTimeout(() => {
+        copyBtn.innerHTML = originalHTML;
+        lucide.createIcons();
+      }, 2200);
+    }
+
+    // Mobile Navigation Menu Toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+
+    // Close Modal on Backdrop Click
+    document.getElementById('booking').addEventListener('click', (e) => {
+      if (e.target.id === 'booking') {
+        closeAuditModal();
+      }
+    });
+
+    // Initialize Application on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      renderServices('all');
+      updateServiceDropdownOptions();
+      renderAppliances();
+      renderProjects('all');
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
